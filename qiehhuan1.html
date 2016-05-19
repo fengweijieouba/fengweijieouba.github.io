@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style type="text/css">
+	
+		*{margin: 0px; padding: 0px;}
+		.box{
+		width: 2000px;height: 500px;overflow: hidden;
+		}
+		#list{width: 16000px;height: 500px;}
+		#list li{list-style: none;
+		float: left; width: 2000px; height: 500px;}
+		.red{background-image: url(img/1.jpg);}
+		.yellow{background-image: url(img/2.jpg);}
+		.black{background-image: url(img/3.jpg);}
+		.blue{background-image: url(img/4.jpg);}
+		.num-list li{width:20px; height: 20px; border: 1px solid #f00; text-align: center; line-height: 20px; float: left; list-style: none;}
+
+		</style>
+
+		</head>
+		<body>
+		<div class="box">
+			<ul id="list">
+				<li class="red"></li>
+				<li class="yellow"></li>
+			<li class="black"></li>
+		     <li class="blue"></li>
+
+			</ul>
+
+
+		</div>
+		<ui class="num-list">
+		<li>杰</li>
+		<li>哥</li>
+		<li>好</li>
+		<li>帅</li>
+
+		</ui>
+		<script src="script/jquery-1.12.3.js"></script>
+		<script type="text/javascript">
+		$(".num-list li").click(function(){
+			var index=$(this).index();
+			var marleft=-2000*index;
+			$("#list").animate({"margin-left":marleft},500)
+		})
+
+
+		</script>
+
+		</body>
+		</html>
